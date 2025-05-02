@@ -31,29 +31,7 @@ Documentation: Help us improve the documentation. Clear explanations and instruc
 
 New Features: Explore new features like spatial dynamics or more complex feedback loops and contribute your enhancements.
 
-How to Get Started:
-Clone the Repository:
 
-bash
-Copy
-Edit
-git clone https://github.com/yourusername/predator-prey-resilience-theorem.git
-cd predator-prey-resilience-theorem
-Install Dependencies:
-
-Ensure you have Python 3.x installed.
-
-Install necessary packages (e.g., NumPy, SciPy, matplotlib) to run simulations:
-
-bash
-Copy
-Edit
-pip install -r requirements.txt
-Run Simulations:
-
-Example scripts to run predator-prey simulations and analyze disturbance effects are provided in the /scripts directory.
-
-Modify the parameters or input your own data to test different scenarios.
 
 Contribute:
 
