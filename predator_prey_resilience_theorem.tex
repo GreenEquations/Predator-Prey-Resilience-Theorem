@@ -1,0 +1,97 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath, amssymb, geometry}
+\geometry{margin=1in}
+\title{Predator-Prey Resilience Theorem}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{I. Theorem Statement}
+
+Ecosystems with predator-prey interactions exhibit variable resilience depending on the presence of:
+
+\begin{itemize}
+  \item Time-delayed predator response
+  \item Nonlinear predator sensitivity to external disturbance
+  \item Species migration and spatial dispersal
+  \item Multi-trophic redundancy and substitution
+\end{itemize}
+
+These structural components influence whether systems recover, absorb, or collapse in response to external shocks.
+
+\section*{II. Model Components}
+
+\subsection*{1. Time Delay in Predator Response}
+
+We introduce a delay-differential system:
+
+\[
+\frac{dP}{dt} = \alpha P \left(1 - \frac{P}{K} \right) - \beta P(t - \tau) Q(t)
+\]
+\[
+\frac{dQ}{dt} = \delta P(t - \tau) Q(t) - \gamma Q
+\]
+
+Where $\tau$ is the delay between prey abundance and predator behavioral response.
+
+\subsection*{2. Nonlinear Resilience Function}
+
+\[
+R(t) = \psi \cdot \exp(-\varphi \cdot D(t))
+\]
+
+Where:
+\begin{itemize}
+  \item $R(t)$: Resilience of predator response
+  \item $D(t)$: Disturbance input (e.g., climate, disease)
+  \item $\psi$: Maximum adaptation amplitude
+  \item $\varphi$: Sensitivity to disturbance
+\end{itemize}
+
+\subsection*{3. Spatial Migration (Diffusion)}
+
+\[
+\frac{\partial P}{\partial t} = \dots + D_p \nabla^2 P(x, t)
+\quad\quad
+\frac{\partial Q}{\partial t} = \dots + D_q \nabla^2 Q(x, t)
+\]
+
+Where $D_p$, $D_q$ are diffusion coefficients and $\nabla^2$ is the Laplacian.
+
+\section*{III. Model Predictions}
+
+\begin{enumerate}
+  \item Systems with delayed predator response exhibit prey overshoot or undercompensation.
+  \item High $\varphi$ (sensitivity) causes rapid collapse after shocks.
+  \item Migration buffers local collapse but amplifies system-wide volatility.
+  \item Predator redundancy increases resilience in multi-trophic networks.
+\end{enumerate}
+
+\section*{IV. Simulation Design}
+
+\begin{itemize}
+  \item Use delay-differential solvers with spatial dynamics.
+  \item Model $D(t)$ as stochastic or event-driven disturbance.
+  \item Explore ranges of $\psi$, $\varphi$, and $\tau$ under various ecological scenarios.
+  \item Recommended tools: MATLAB, Julia, SciPy, R (`deSolve`), NetLogo.
+\end{itemize}
+
+\section*{V. Empirical Foundation}
+
+\begin{itemize}
+  \item \textbf{Isle Royale}: Collapse and partial rebound in predator-prey cycles.
+  \item \textbf{Atlantic Cod}: Delayed predation and trophic restructuring.
+  \item \textbf{Ecological Resilience Studies}: Threshold behavior and regime shifts.
+\end{itemize}
+
+\section*{VI. Applications}
+
+\begin{itemize}
+  \item Conservation planning and recovery window identification.
+  \item Ecosystem sensitivity testing under stochastic climate inputs.
+  \item Cross-scale resilience mapping in complex adaptive networks.
+\end{itemize}
+
+\end{document}
